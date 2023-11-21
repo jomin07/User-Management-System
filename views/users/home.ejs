@@ -1,0 +1,57 @@
+<body class="bg-warning"></body>
+<%- include('../layouts/header.ejs') %>
+
+<!-- <h1>Welcome,  <%= user.name%></h1> -->
+
+<!-- <table width="30%">
+    <tr>
+        <td><img src="userImages/<%= user.image %>" alt="image" width="100px" height="100px"></td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td><%= user.name %></td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td><%= user.email %></td>
+    </tr>
+    <tr>
+        <td>Mobile</td>
+        <td><%= user.mobile %></td>
+    </tr>
+</table>
+
+<a href="/edit?id=<%= user._id %>">Edit</a>
+<a href="/logout">Logout</a> -->
+
+<div class="container mt-4">
+    <h1 class="display-4">Welcome, <%= user.name %></h1>
+
+    <div class="row">
+        <div class="col-md-4">
+            <img src="userImages/<%= user.image %>" alt="image" class="img-fluid rounded-circle" width="100px" height="100px">
+        </div>
+        <div class="col-md-8">
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <td><%= user.name %></td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><%= user.email %></td>
+                </tr>
+                <tr>
+                    <th>Mobile</th>
+                    <td><%= user.mobile %></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <a href="/edit?id=<%= user._id %>" class="btn btn-primary mt-4">Edit</a>
+    <a href="/logout" class="btn btn-danger mt-4 ms-2">Logout</a>
+</div>
+
+
+<%- include('../layouts/footer.ejs') %>

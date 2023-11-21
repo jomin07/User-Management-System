@@ -1,0 +1,62 @@
+<body class="bg-warning">
+    
+</body>
+<%- include('../layouts/header.ejs') %>
+
+<!-- <h1>Welcome, <%= admin.name %></h1> -->
+
+<!-- <a href="/admin/dashboard">Dashboard</a>
+
+<table style="width: 30%;">
+    <tr>
+        <td><img src="/userImages/<%= admin.image%>" alt="image" width="100px" height="100px"></td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td><%= admin.name %></td>
+    </tr>
+    <br><br>
+    <tr>
+        <td>Email</td>
+        <td><%= admin.email %></td>
+    </tr>
+    <br><br>
+    <tr>
+        <td>Mobile</td>
+        <td><%= admin.mobile %></td>
+    </tr>
+    
+</table>
+
+<a href="/admin/logout">Logout</a> -->
+
+<div class="container mt-4">
+    <h1 class="display-4">Welcome, <%= admin.name %></h1>
+
+    <div class="row">
+        <div class="col-md-4">
+            <img src="userImages/<%= admin.image %>" alt="image" class="img-fluid rounded-circle" width="200px" height="100px">
+        </div>
+        <div class="col-md-8">
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <td><%= admin.name %></td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><%= admin.email %></td>
+                </tr>
+                <tr>
+                    <th>Mobile</th>
+                    <td><%= admin.mobile %></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <a href="/admin/dashboard" class="btn btn-primary mt-4">Dashboard</a>
+    <a href="/admin/logout" class="btn btn-danger mt-4 ms-2">Logout</a>
+</div>
+
+
+<%- include('../layouts/footer.ejs') %>
