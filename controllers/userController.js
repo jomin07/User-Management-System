@@ -21,6 +21,11 @@ const loadRegister = async(req,res) =>{
 const insertUser = async(req,res) =>{
     try{
         const secPassword = await securePassword(req.body.password);
+        const existingUser = await User.findOne({ email: req.body.email });
+
+        if (existingUser) {
+            return res.render('registration', { message: "Email already exists, try another one" });
+        }
         const user = new User({
             name:req.body.name,
             email:req.body.email,
